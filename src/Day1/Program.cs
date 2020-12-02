@@ -36,19 +36,19 @@ public static class ExpenseReport
         return Array.Empty<int>();
     }
     
-    public static int[] FindSum2(IReadOnlyCollection<int> rows, int sum)
+    public static int[] FindSum2(int[] rows, int sum)
     {
-        var ordered = rows.OrderBy(x => x).ToArray();
+        Array.Sort(rows);
 
-        foreach (var a in ordered)
+        foreach (var a in rows)
         {
             var diffB = sum - a;
-            foreach (var b in ordered.Where(x => x <= diffB))
+            foreach (var b in rows.TakeWhile(x => x <= diffB))
             {
                 var diffC = diffB - b;
-                var binarySearch = Array.BinarySearch(ordered, diffC);
+                var binarySearch = Array.BinarySearch(rows, diffC);
                 if (binarySearch >= 0)
-                    return new[] {a, b, ordered[binarySearch]};    
+                    return new[] {a, b, rows[binarySearch]};    
             }
         }
         
