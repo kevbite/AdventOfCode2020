@@ -24,7 +24,7 @@ public static class CustomsDeclarationForm
             .ToArray().Sum(s =>
                 s.SelectMany(x => x.Where(x => x is >= 'a' and <= 'z'))
                     .GroupBy(x => x)
-                    .Count(x => x.Count<char>() == s.Length));
+                    .Count(x => x.Count() == s.Length));
     }
 }
 
