@@ -13,48 +13,41 @@ public static class HandheldGameConsole
     {
         var program = new Program(Parse(input));
 
-        return TryRunProgram(program).Accumulator;
+        return TryRunProgram(program)
+            .Pop()
+            .Accumulator;
     }
 
-    private static Program TryRunProgram(Program program)
+    private static Stack<Program> TryRunProgram(Program program)
     {
         var hashSet = new HashSet<int>();
-
-        while (!program.Completed && !hashSet.Contains(program.NextInstruction))
-        {
-            hashSet.Add(program.NextInstruction);
-            program = program.Step();
-        }
-
-        return program;
-    }
-
-    public static int RunAndFix(string input)
-    {
-        var operations = Parse(input);
-
-        var hashSet = new HashSet<int>();
-        var program = new Program(operations);
         var programs = new Stack<Program>();
-        programs.Push(program);
 
-        while (!hashSet.Contains(program.NextInstruction))
+        programs.Push(program);
+        while (!program.Completed && !hashSet.Contains(program.NextInstruction))
         {
             hashSet.Add(program.NextInstruction);
             program = program.Step();
             programs.Push(program);
         }
 
-        while (program is null or {Completed : false})
+        return programs;
+    }
+
+    public static int RunAndFix(string input)
+    {
+        var programs = TryRunProgram(new Program(Parse(input)));
+
+        var program = programs.Pop();
+       
+        while (program is {Completed : false})
         {
             program = programs.Pop();
-            program = program.GetAlternativeProgram();
-            if (program is not null)
+            if (program.GetAlternativeProgram() is { } alternative)
             {
-                program = TryRunProgram(program);
+                program = TryRunProgram(alternative).Pop();
             }
         }
-
 
         return program.Accumulator;
     }
