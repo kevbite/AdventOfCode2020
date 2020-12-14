@@ -2,8 +2,10 @@
 using System.Linq;
 
 Console.WriteLine("Part 1");
-var (x, y) = Navigator.GetEndPosition(PuzzleInput.Data);
-Console.WriteLine(Math.Abs(x) + Math.Abs(y));
+Console.WriteLine(Navigator.GetManhattanDistance(() => Navigator.GetEndPositionPart1(PuzzleInput.Data)));
+Console.WriteLine();
+Console.WriteLine("Part 2");
+Console.WriteLine(Navigator.GetManhattanDistance(() => Navigator.GetEndPositionPart2(PuzzleInput.Data)));
 
 public record Heading(int Value)
 {
@@ -26,39 +28,60 @@ public record Heading(int Value)
 
 public static class Navigator
 {
-    public static (int x, int y) GetEndPosition(string input)
+    public static (int x, int y) GetEndPositionPart1(string input)
     {
-        var actions = input.Split(Environment.NewLine)
-            .Select(x =>
-                new
-                {
-                    Action = x[0] switch
-                    {
-                        'N' => ShipAction.North,
-                        'E' => ShipAction.East,
-                        'S' => ShipAction.South,
-                        'W' => ShipAction.West,
-                        'R' => ShipAction.Right,
-                        'L' => ShipAction.Left,
-                        'F' => ShipAction.Forward,
-                        _ => throw new InvalidOperationException()
-                    },
-                    Value = int.Parse(x.Substring(1))
-                }).ToArray();
+        var actions = GetCommands(input);
 
-        var ship = new Ship(new Heading(90), (0, 0));
-        foreach (var action in actions)
-        {
-            ship = ship.ApplyAction(action.Action, action.Value);
-        }
+        var ship = actions.Aggregate(
+            new Part1Ship(new Heading(90), (0, 0)),
+            (current, action)
+                => current.ApplyAction(action.Action, action.Value));
 
         return ship.Position;
     }
+
+    public static (int x, int y) GetEndPositionPart2(string input)
+    {
+        var actions = GetCommands(input);
+
+        var ship = actions.Aggregate(
+            new Part2Ship(new WayPoint(10, 1), (0, 0)),
+            (current, action)
+                => current.ApplyAction(action.Action, action.Value));
+
+        return ship.Position;
+    }
+
+    public static int GetManhattanDistance(Func<(int x, int y)> func)
+    {
+        var (x, y) = func();
+        return Math.Abs(x) + Math.Abs(y);
+    }
+
+    record Command(ShipAction Action, int Value);
+
+    private static Command[] GetCommands(string input)
+    {
+        var actions = input.Split(Environment.NewLine)
+            .Select(x =>
+                new Command(x[0] switch
+                {
+                    'N' => ShipAction.North,
+                    'E' => ShipAction.East,
+                    'S' => ShipAction.South,
+                    'W' => ShipAction.West,
+                    'R' => ShipAction.Right,
+                    'L' => ShipAction.Left,
+                    'F' => ShipAction.Forward,
+                    _ => throw new InvalidOperationException()
+                }, int.Parse(x[1..]))).ToArray();
+        return actions;
+    }
 }
 
-public record Ship(Heading Heading, (int x, int y) Position)
+public record Part1Ship(Heading Heading, (int x, int y) Position)
 {
-    public Ship ApplyAction(ShipAction action, int value)
+    public Part1Ship ApplyAction(ShipAction action, int value)
     {
         return (action, GetHeadingDirection()) switch
         {
@@ -86,6 +109,58 @@ public record Ship(Heading Heading, (int x, int y) Position)
             90 => ShipAction.East,
             180 => ShipAction.South,
             270 => ShipAction.West,
+            _ => throw new InvalidOperationException()
+        };
+    }
+}
+
+public record WayPoint(int X, int Y)
+{
+    public WayPoint RotateRight(int degrees)
+    {
+        WayPoint current = this;
+        var count = degrees / 90;
+        for (var i = 0; i < count; i++)
+        {
+            current = current with{X = current.Y, Y = -current.X};
+        }
+
+        return current;
+    }
+
+    public WayPoint RotateLeft(int degrees)
+    {
+        WayPoint current = this;
+        var count = degrees / 90;
+        for (var i = 0; i < count; i++)
+        {
+            current = current with{X = -current.Y, Y = current.X};
+        }
+
+        return current;
+    }
+}
+
+public record Part2Ship(WayPoint WayPoint, (int x, int y) Position)
+{
+    public Part2Ship ApplyAction(ShipAction action, int value)
+    {
+        return action switch
+        {
+            ShipAction.North
+                => this with {WayPoint = WayPoint with {Y = WayPoint.Y + value}},
+            ShipAction.South
+                => this with {WayPoint = WayPoint with {Y = WayPoint.Y - value}},
+            ShipAction.East
+                => this with {WayPoint = WayPoint with {X = WayPoint.X + value}},
+            ShipAction.West
+                => this with {WayPoint = WayPoint with {X = WayPoint.X - value}},
+            ShipAction.Left
+                => this with {WayPoint = WayPoint.RotateLeft(value)},
+            ShipAction.Right
+                => this with {WayPoint = WayPoint.RotateRight(value)},
+            ShipAction.Forward
+                => this with {Position = (Position.x + WayPoint.X * value, Position.y + WayPoint.Y * value)},
             _ => throw new InvalidOperationException()
         };
     }

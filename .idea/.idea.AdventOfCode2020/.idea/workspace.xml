@@ -15,9 +15,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d50e9eb2-48b6-46a2-8b65-67aee0bccf89" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AdventOfCode2020/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AdventOfCode2020/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AdventOfCode2020/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AdventOfCode2020/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AdventOfCode2020.sln" beforeDir="false" afterPath="$PROJECT_DIR$/AdventOfCode2020.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Day12/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Day12/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Day12.Tests/UnitTest1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/test/Day12.Tests/NavigatorTests.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,8 +64,8 @@
       <option value="$PROJECT_DIR$/test/Day11.Tests/UnitTest1.cs" />
       <option value="$PROJECT_DIR$/test/Day11.Tests/SeatingTests.cs" />
       <option value="$PROJECT_DIR$/src/Day11/Program.cs" />
-      <option value="$PROJECT_DIR$/test/Day12.Tests/UnitTest1.cs" />
       <option value="$PROJECT_DIR$/src/Day12/Program.cs" />
+      <option value="$PROJECT_DIR$/test/Day12.Tests/UnitTest1.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1l39FBTg8qdsXBZhXNTZVPgph26" />
@@ -308,7 +308,8 @@
       <workItem from="1607454172491" duration="2989000" />
       <workItem from="1607530033732" duration="5521000" />
       <workItem from="1607720984888" duration="6106000" />
-      <workItem from="1607898939406" duration="3346000" />
+      <workItem from="1607898939406" duration="3572000" />
+      <workItem from="1607983662835" duration="2557000" />
     </task>
     <servers />
   </component>
@@ -392,19 +393,6 @@
           <line>41</line>
           <properties documentPath="$PROJECT_DIR$/test/Day11.Tests/UnitTest1.cs" initialLine="23" containingFunctionPresentation="method 'Part1FirstRound'" />
           <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/src/Day12/Program.cs</url>
-          <line>52</line>
-          <properties documentPath="$PROJECT_DIR$/src/Day12/Program.cs" initialLine="53" containingFunctionPresentation="method 'GetEndPosition'">
-            <startOffsets>
-              <option value="1562" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1563" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
