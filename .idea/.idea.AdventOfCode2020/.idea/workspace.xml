@@ -12,12 +12,13 @@
     <projectFile>src/Day9/Day9.csproj</projectFile>
     <projectFile>src/Day11/Day11.csproj</projectFile>
     <projectFile>src/Day12/Day12.csproj</projectFile>
+    <projectFile>src/Day10/Day10.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d50e9eb2-48b6-46a2-8b65-67aee0bccf89" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AdventOfCode2020/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AdventOfCode2020/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AdventOfCode2020/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AdventOfCode2020/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Day12/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Day12/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Day12.Tests/UnitTest1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/test/Day12.Tests/NavigatorTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdventOfCode2020.sln" beforeDir="false" afterPath="$PROJECT_DIR$/AdventOfCode2020.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +67,9 @@
       <option value="$PROJECT_DIR$/src/Day11/Program.cs" />
       <option value="$PROJECT_DIR$/src/Day12/Program.cs" />
       <option value="$PROJECT_DIR$/test/Day12.Tests/UnitTest1.cs" />
+      <option value="$PROJECT_DIR$/test/Day10.Tests/UnitTest1.cs" />
+      <option value="$PROJECT_DIR$/test/Day10.Tests/JoltageCalculatorTests.cs" />
+      <option value="$PROJECT_DIR$/src/Day10/Program.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1l39FBTg8qdsXBZhXNTZVPgph26" />
@@ -86,9 +90,10 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected=".NET Project.Day12">
+  <component name="RunManager" selected=".NET Project.Day10">
     <configuration name="Day1" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -98,6 +103,24 @@
       <option name="USE_MONO" value="0" />
       <option name="RUNTIME_ARGUMENTS" value="" />
       <option name="PROJECT_PATH" value="$PROJECT_DIR$/src/Day1/Day1.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value="" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <configuration name="Day10" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/src/Day10/Day10.csproj" />
       <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
@@ -309,7 +332,9 @@
       <workItem from="1607530033732" duration="5521000" />
       <workItem from="1607720984888" duration="6106000" />
       <workItem from="1607898939406" duration="3572000" />
-      <workItem from="1607983662835" duration="2557000" />
+      <workItem from="1607983662835" duration="2977000" />
+      <workItem from="1608023132915" duration="481000" />
+      <workItem from="1608246322743" duration="867000" />
     </task>
     <servers />
   </component>
