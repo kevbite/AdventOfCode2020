@@ -5,15 +5,14 @@ using System.Linq;
 Console.WriteLine("Part 1");
 var part1 = JoltageCalculator.Part1(PuzzleInput.Data);
 Console.WriteLine(part1.diffsOfOne * part1.diffsOfThree);
+Console.WriteLine("Part 2");
+Console.WriteLine(JoltageCalculator.Part2(PuzzleInput.Data));
 
 public static class JoltageCalculator
 {
-    public static (int diffsOfOne,int diffsOfThree) Part1(string input)
+    public static (int diffsOfOne, int diffsOfThree) Part1(string input)
     {
-        var joltageRatings = input.Split(Environment.NewLine)
-            .Select(int.Parse)
-            .OrderBy(x => x)
-            .ToList();
+        var joltageRatings = ReadJoltageRatings(input);
 
         var lastRating = 0;
 
@@ -29,6 +28,54 @@ public static class JoltageCalculator
 
         return (diffsOfOne, diffsOfThree);
     }
+
+    private static List<int> ReadJoltageRatings(string input)
+    {
+        return input.Split(Environment.NewLine)
+            .Select(int.Parse)
+            .OrderBy(x => x)
+            .ToList();
+    }
+
+    // (0), 1, 4, 5, 6, 7, 10, 11, 12, 15, 16, 19, (22)
+    //         ^  *  *  *
+    // (0), 1, 4, 6, 7, 10, 11, 12, 15, 16, 19, (22)
+
+    // (0), 1, 4, 7, 10, 11, 12, 15, 16, 19, (22)
+
+    public static long Part2(string input)
+    {
+        var joltageRatings = ReadJoltageRatings(input);
+        joltageRatings.Insert(0, 0);
+        joltageRatings.Add(joltageRatings.Last() + 3);
+        Dictionary<int, long> hashSet = new();
+        
+        long Part2(int start)
+        {
+            if (hashSet.TryGetValue(start, out var count))
+                return count;
+            count = 1L;
+            for (var i = start; i < joltageRatings.Count; i++)
+            {
+                if (i + 2 < joltageRatings.Count && joltageRatings[i + 2] <= joltageRatings[i] + 3)
+                {
+                    count += Part2(i + 2);
+                }
+
+                if (i + 3 < joltageRatings.Count && joltageRatings[i + 3] <= joltageRatings[i] + 3)
+                {
+                    count += Part2(i + 3);
+                }
+            }
+
+            hashSet.Add(start, count);
+        
+            return count;
+        }
+        
+        return Part2(0);
+    }
+
 }
 
 public static class PuzzleInput

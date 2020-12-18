@@ -18,7 +18,8 @@
     <list default="true" id="d50e9eb2-48b6-46a2-8b65-67aee0bccf89" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AdventOfCode2020/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AdventOfCode2020/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AdventOfCode2020/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AdventOfCode2020/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AdventOfCode2020.sln" beforeDir="false" afterPath="$PROJECT_DIR$/AdventOfCode2020.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Day10/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Day10/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Day10.Tests/JoltageCalculatorTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/test/Day10.Tests/JoltageCalculatorTests.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -334,7 +335,8 @@
       <workItem from="1607898939406" duration="3572000" />
       <workItem from="1607983662835" duration="2977000" />
       <workItem from="1608023132915" duration="481000" />
-      <workItem from="1608246322743" duration="867000" />
+      <workItem from="1608246322743" duration="1110000" />
+      <workItem from="1608313114987" duration="4296000" />
     </task>
     <servers />
   </component>

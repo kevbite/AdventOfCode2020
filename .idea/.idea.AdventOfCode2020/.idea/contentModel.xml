@@ -16,7 +16,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Day1.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
+          <e p="Release" t="Include">
             <e p="net5.0" t="Include">
               <e p="Day1.AssemblyInfo.cs" t="Include" />
             </e>
@@ -28,7 +28,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Day10.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
+          <e p="Release" t="Include">
             <e p="net5.0" t="Include">
               <e p="Day10.AssemblyInfo.cs" t="Include" />
             </e>
@@ -40,7 +40,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Day11.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
+          <e p="Release" t="Include">
             <e p="net5.0" t="Include">
               <e p="Day11.AssemblyInfo.cs" t="Include" />
             </e>
@@ -52,7 +52,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Day12.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
+          <e p="Release" t="Include">
             <e p="net5.0" t="Include">
               <e p="Day12.AssemblyInfo.cs" t="Include" />
             </e>
@@ -64,7 +64,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Day2.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
+          <e p="Release" t="Include">
             <e p="net5.0" t="Include">
               <e p="Day2.AssemblyInfo.cs" t="Include" />
             </e>
@@ -76,7 +76,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Day3.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
+          <e p="Release" t="Include">
             <e p="net5.0" t="Include">
               <e p="Day3.AssemblyInfo.cs" t="Include" />
             </e>
@@ -88,7 +88,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Day4.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
+          <e p="Release" t="Include">
             <e p="net5.0" t="Include">
               <e p="Day4.AssemblyInfo.cs" t="Include" />
             </e>
@@ -100,7 +100,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Day5.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
+          <e p="Release" t="Include">
             <e p="net5.0" t="Include">
               <e p="Day5.AssemblyInfo.cs" t="Include" />
             </e>
@@ -112,7 +112,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Day6.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
+          <e p="Release" t="Include">
             <e p="net5.0" t="Include">
               <e p="Day6.AssemblyInfo.cs" t="Include" />
             </e>
@@ -124,7 +124,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Day7.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
+          <e p="Release" t="Include">
             <e p="net5.0" t="Include">
               <e p="Day7.AssemblyInfo.cs" t="Include" />
             </e>
@@ -136,7 +136,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Day8.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
+          <e p="Release" t="Include">
             <e p="net5.0" t="Include">
               <e p="Day8.AssemblyInfo.cs" t="Include" />
             </e>
@@ -148,7 +148,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Day9.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
+          <e p="Release" t="Include">
             <e p="net5.0" t="Include">
               <e p="Day9.AssemblyInfo.cs" t="Include" />
             </e>
@@ -160,7 +160,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Day1.Tests.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
+          <e p="Release" t="Include">
             <e p="net5.0" t="Include">
               <e p="Day1.Tests.AssemblyInfo.cs" t="Include" />
             </e>
@@ -173,7 +173,7 @@
         <e p="Day10.Tests.csproj" t="IncludeRecursive" />
         <e p="JoltageCalculatorTests.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
+          <e p="Release" t="Include">
             <e p="net5.0" t="Include">
               <e p="Day10.Tests.AssemblyInfo.cs" t="Include" />
             </e>
@@ -184,7 +184,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Day11.Tests.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
+          <e p="Release" t="Include">
             <e p="net5.0" t="Include">
               <e p="Day11.Tests.AssemblyInfo.cs" t="Include" />
             </e>
@@ -197,7 +197,7 @@
         <e p="Day12.Tests.csproj" t="IncludeRecursive" />
         <e p="NavigatorTests.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
+          <e p="Release" t="Include">
             <e p="net5.0" t="Include">
               <e p="Day12.Tests.AssemblyInfo.cs" t="Include" />
             </e>
@@ -208,7 +208,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Day2.Tests.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
+          <e p="Release" t="Include">
             <e p="net5.0" t="Include">
               <e p="Day2.Tests.AssemblyInfo.cs" t="Include" />
             </e>
@@ -220,7 +220,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Day3.Tests.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
+          <e p="Release" t="Include">
             <e p="net5.0" t="Include">
               <e p="Day3.Tests.AssemblyInfo.cs" t="Include" />
             </e>
@@ -232,7 +232,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Day4.Tests.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
+          <e p="Release" t="Include">
             <e p="net5.0" t="Include">
               <e p="Day4.Tests.AssemblyInfo.cs" t="Include" />
             </e>
@@ -245,7 +245,7 @@
         <e p="BinaryBoardingTests.cs" t="Include" />
         <e p="Day5.Tests.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
+          <e p="Release" t="Include">
             <e p="net5.0" t="Include">
               <e p="Day5.Tests.AssemblyInfo.cs" t="Include" />
             </e>
@@ -257,7 +257,7 @@
         <e p="CustomsDeclarationFormTests.cs" t="Include" />
         <e p="Day6.Tests.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
+          <e p="Release" t="Include">
             <e p="net5.0" t="Include">
               <e p="Day6.Tests.AssemblyInfo.cs" t="Include" />
             </e>
@@ -269,7 +269,7 @@
         <e p="Day7.Tests.csproj" t="IncludeRecursive" />
         <e p="LuggageColourCounterTests.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
+          <e p="Release" t="Include">
             <e p="net5.0" t="Include">
               <e p="Day7.Tests.AssemblyInfo.cs" t="Include" />
             </e>
@@ -280,7 +280,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Day8.Tests.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
+          <e p="Release" t="Include">
             <e p="net5.0" t="Include">
               <e p="Day8.Tests.AssemblyInfo.cs" t="Include" />
             </e>
@@ -292,7 +292,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Day9.Tests.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
+          <e p="Release" t="Include">
             <e p="net5.0" t="Include">
               <e p="Day9.Tests.AssemblyInfo.cs" t="Include" />
             </e>
