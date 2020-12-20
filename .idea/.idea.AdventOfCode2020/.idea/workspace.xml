@@ -13,13 +13,14 @@
     <projectFile>src/Day11/Day11.csproj</projectFile>
     <projectFile>src/Day12/Day12.csproj</projectFile>
     <projectFile>src/Day10/Day10.csproj</projectFile>
+    <projectFile>src/Day13/Day13.csproj</projectFile>
+    <projectFile>src/Day14/Day14.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d50e9eb2-48b6-46a2-8b65-67aee0bccf89" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AdventOfCode2020/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AdventOfCode2020/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AdventOfCode2020/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AdventOfCode2020/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Day10/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Day10/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Day10.Tests/JoltageCalculatorTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/test/Day10.Tests/JoltageCalculatorTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdventOfCode2020.sln" beforeDir="false" afterPath="$PROJECT_DIR$/AdventOfCode2020.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,9 +34,11 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1F4F0914-5411-4A47-9D76-C00412957903/17/Array.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1F4F0914-5411-4A47-9D76-C00412957903/402/List.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377B61B6-13EA-444F-826F-377D9474FFCA/a6/a93ef5e6/ExecutionTimer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/437F6397-7A22-40B5-AD3C-D2C483DBA6EA/D/AnyAll.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2A925EDF-E558-4632-978E-98FD8509CDF4/a1/5d0d22d4/ExceptionAggregator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/437F6397-7A22-40B5-AD3C-D2C483DBA6EA/3D/Iterator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2EE94779-260F-477A-A59B-FFB0E9E36531/34/77c32fec/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/test/Day13.Test/UnitTest1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377B61B6-13EA-444F-826F-377D9474FFCA/e4/640008f2/TestInvoker`1.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -71,6 +74,11 @@
       <option value="$PROJECT_DIR$/test/Day10.Tests/UnitTest1.cs" />
       <option value="$PROJECT_DIR$/test/Day10.Tests/JoltageCalculatorTests.cs" />
       <option value="$PROJECT_DIR$/src/Day10/Program.cs" />
+      <option value="$PROJECT_DIR$/src/Day13/Program.cs" />
+      <option value="$PROJECT_DIR$/test/Day13.Test/UnitTest1.cs" />
+      <option value="$PROJECT_DIR$/test/Day13.Tests/UnitTest1.cs" />
+      <option value="$PROJECT_DIR$/test/Day14.Tests/UnitTest1.cs" />
+      <option value="$PROJECT_DIR$/src/Day14/Program.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1l39FBTg8qdsXBZhXNTZVPgph26" />
@@ -94,7 +102,7 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected=".NET Project.Day10">
+  <component name="RunManager" selected=".NET Project.Day14">
     <configuration name="Day1" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -158,6 +166,42 @@
       <option name="USE_MONO" value="0" />
       <option name="RUNTIME_ARGUMENTS" value="" />
       <option name="PROJECT_PATH" value="$PROJECT_DIR$/src/Day12/Day12.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value="" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <configuration name="Day13" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/src/Day13/Day13.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value="" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <configuration name="Day14" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/src/Day14/Day14.csproj" />
       <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
@@ -336,7 +380,10 @@
       <workItem from="1607983662835" duration="2977000" />
       <workItem from="1608023132915" duration="481000" />
       <workItem from="1608246322743" duration="1110000" />
-      <workItem from="1608313114987" duration="4296000" />
+      <workItem from="1608313114987" duration="4870000" />
+      <workItem from="1608327342929" duration="5694000" />
+      <workItem from="1608418778223" duration="1437000" />
+      <workItem from="1608488556184" duration="1882000" />
     </task>
     <servers />
   </component>
@@ -420,6 +467,32 @@
           <line>41</line>
           <properties documentPath="$PROJECT_DIR$/test/Day11.Tests/UnitTest1.cs" initialLine="23" containingFunctionPresentation="method 'Part1FirstRound'" />
           <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/src/Day13/Program.cs</url>
+          <line>46</line>
+          <properties documentPath="$PROJECT_DIR$/src/Day13/Program.cs" initialLine="36" containingFunctionPresentation="method 'GetNextDeparture'">
+            <startOffsets>
+              <option value="1445" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1446" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/test/Day14.Tests/UnitTest1.cs</url>
+          <line>14</line>
+          <properties documentPath="$PROJECT_DIR$/test/Day14.Tests/UnitTest1.cs" initialLine="14" containingFunctionPresentation="method 'Part1'">
+            <startOffsets>
+              <option value="281" />
+            </startOffsets>
+            <endOffsets>
+              <option value="282" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
