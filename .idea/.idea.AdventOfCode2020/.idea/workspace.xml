@@ -18,9 +18,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d50e9eb2-48b6-46a2-8b65-67aee0bccf89" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AdventOfCode2020/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AdventOfCode2020/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AdventOfCode2020/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AdventOfCode2020/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AdventOfCode2020.sln" beforeDir="false" afterPath="$PROJECT_DIR$/AdventOfCode2020.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Day14/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Day14/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Day14.Tests/ComputerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/test/Day14.Tests/ComputerTests.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +79,7 @@
       <option value="$PROJECT_DIR$/test/Day13.Tests/UnitTest1.cs" />
       <option value="$PROJECT_DIR$/test/Day14.Tests/UnitTest1.cs" />
       <option value="$PROJECT_DIR$/src/Day14/Program.cs" />
+      <option value="$PROJECT_DIR$/test/Day14.Tests/ComputerTests.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1l39FBTg8qdsXBZhXNTZVPgph26" />
@@ -88,7 +89,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.3502036" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.35022116" />
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -383,7 +384,8 @@
       <workItem from="1608313114987" duration="4870000" />
       <workItem from="1608327342929" duration="5694000" />
       <workItem from="1608418778223" duration="1437000" />
-      <workItem from="1608488556184" duration="1882000" />
+      <workItem from="1608488556184" duration="9756000" />
+      <workItem from="1608630042271" duration="1599000" />
     </task>
     <servers />
   </component>
@@ -482,17 +484,36 @@
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/test/Day14.Tests/UnitTest1.cs</url>
+          <url>file://$PROJECT_DIR$/test/Day14.Tests/ComputerTests.cs</url>
           <line>14</line>
-          <properties documentPath="$PROJECT_DIR$/test/Day14.Tests/UnitTest1.cs" initialLine="14" containingFunctionPresentation="method 'Part1'">
+          <properties documentPath="$PROJECT_DIR$/test/Day14.Tests/UnitTest1.cs" initialLine="14" containingFunctionPresentation="method 'Part1'" />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/src/Day14/Program.cs</url>
+          <line>79</line>
+          <properties documentPath="$PROJECT_DIR$/src/Day14/Program.cs" initialLine="79" containingFunctionPresentation="method 'Write'">
             <startOffsets>
-              <option value="281" />
+              <option value="2436" />
             </startOffsets>
             <endOffsets>
-              <option value="282" />
+              <option value="2503" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="10" />
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/src/Day14/Program.cs</url>
+          <line>67</line>
+          <properties documentPath="$PROJECT_DIR$/src/Day14/Program.cs" initialLine="65" containingFunctionPresentation="method 'Write'">
+            <startOffsets>
+              <option value="2063" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2073" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

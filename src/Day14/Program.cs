@@ -1,19 +1,110 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Text.RegularExpressions;
 
 Console.WriteLine("Part1");
-Console.WriteLine(Computer.Initialize(PuzzleInput.Data).Memory.Values.Sum());
+Console.WriteLine(ComputerPart1.Initialize(PuzzleInput.Data).Memory.Values.Sum());
+Console.WriteLine("Part2");
+Console.WriteLine(ComputerPart2.Initialize(PuzzleInput.Data).Memory.Values.Sum());
 
-public record Computer(IReadOnlyDictionary<long, long> Memory, string Mask)
+public record ComputerPart1()
+    : Computer(new Dictionary<long, long>(), "")
 {
     public static Computer Initialize(string dockingProgram)
     {
+        return Initialize(dockingProgram, new ComputerPart1());
+    }
+
+    protected override Computer Write(in long address, in long value)
+    {
+        var newMemory = new Dictionary<long, long>(Memory);
+
+        var andMask = Convert.ToInt64(Mask.Replace("X", "1"), 2);
+        var orMask = Convert.ToInt64(Mask.Replace("X", "0"), 2);
+
+        newMemory[address] = value & andMask | orMask;
+
+        return this with{ Memory = newMemory };
+    }
+}
+
+public record ComputerPart2()
+    : Computer(new Dictionary<long, long>(), "")
+{
+    public static Computer Initialize(string dockingProgram)
+    {
+        return Initialize(dockingProgram, new ComputerPart2());
+    }
+
+    static IEnumerable<List<int>> GetCombinations(List<int> list)
+    {
+        var count = Math.Pow(2, list.Count);
+        for (var i = 1; i <= count - 1; i++)
+        {
+            var output = new List<int>();
+            var str = Convert.ToString(i, 2).PadLeft(list.Count, '0');
+            for (var j = 0; j < str.Length; j++)
+            {
+                if (str[j] == '1')
+                {
+                    output.Add(list[j]);
+                }
+            }
+
+            yield return output;
+        }
+    }
+
+    protected override Computer Write(in long address, in long value)
+    {
+        var newMemory = new Dictionary<long, long>(Memory);
+
+        var andMask = Convert.ToInt64(Mask.Replace("0", "1").Replace("X", "0"), 2);
+        var orMask = Convert.ToInt64(Mask.Replace("X", "0"), 2);
+
+        var baseAddress = address & andMask | orMask;
+        newMemory[baseAddress] = value;
+
+        var floatingBitsCombinations = GetCombinations(Mask.GetAllIndexesOf('X').ToList());
+
+        foreach (var floatingBitCombination in floatingBitsCombinations)
+        {
+            var sb = new StringBuilder(new string('0', 36));
+            foreach (var i in floatingBitCombination)
+            {
+                sb[i] = '1';
+            }
+
+            newMemory[baseAddress | Convert.ToInt64(sb.ToString(), 2)] = value;
+        }
+
+        return this with{ Memory = newMemory };
+    }
+}
+
+public static class Ext
+{
+    public static IEnumerable<int> GetAllIndexesOf(this string str, char v)
+    {
+        var minIndex = str.IndexOf(v);
+        while (minIndex != -1)
+        {
+            yield return minIndex;
+            minIndex = str.IndexOf(v, minIndex + 1);
+        }
+    }
+}
+
+public abstract record Computer(IReadOnlyDictionary<long, long> Memory, string Mask)
+{
+    protected static Computer Initialize(string dockingProgram, Computer computer)
+    {
         var instructions = ParseInstructions(dockingProgram);
 
-        return instructions.Aggregate(new Computer(new Dictionary<long, long>(), ""),
-            (computer, instruction) => instruction.Apply(computer));
+        return instructions.Aggregate(computer,
+            (c, instruction) => instruction.Apply(c));
     }
 
     private static IEnumerable<IInstruction> ParseInstructions(string dockingProgram)
@@ -31,18 +122,7 @@ public record Computer(IReadOnlyDictionary<long, long> Memory, string Mask)
             });
     }
 
-    private Computer Write(in long address, in long value)
-    {
-        var newMemory = new Dictionary<long, long>(Memory);
-
-        var andMask = Convert.ToInt64(Mask.Replace("X", "1"), 2);
-        var orMask = Convert.ToInt64(Mask.Replace("X", "0"), 2);
-
-        newMemory[address] = value & andMask | orMask;
-
-
-        return this with{ Memory = newMemory };
-    }
+    protected abstract Computer Write(in long address, in long value);
 
     interface IInstruction
     {
@@ -51,18 +131,12 @@ public record Computer(IReadOnlyDictionary<long, long> Memory, string Mask)
 
     record WriteToMemoryInstruction(long Address, long Value) : IInstruction
     {
-        public Computer Apply(Computer computer)
-        {
-            return computer.Write(Address, Value);
-        }
+        public Computer Apply(Computer computer) => computer.Write(Address, Value);
     };
 
     record UpdateBitmask(string Mask) : IInstruction
     {
-        public Computer Apply(Computer computer)
-        {
-            return computer with {Mask = Mask};
-        }
+        public Computer Apply(Computer computer) => computer with {Mask = Mask};
     };
 }
 
